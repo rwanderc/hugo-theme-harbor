@@ -21,6 +21,11 @@
             <h1>
               {{ with $title }}{{ . }}{{ else }}<br />{{ end }}
             </h1>
+            {{ if .Params.subtitle }}
+              <h2>
+                {{ $.Params.subtitle }}
+              </h2>
+            {{ end }}
           {{ end }}
           {{ if eq .Type "post" }}
             {{ partial "postmeta.html" . }}
