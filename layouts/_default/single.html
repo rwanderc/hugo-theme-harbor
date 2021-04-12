@@ -1,6 +1,11 @@
 {{ define "main" }}
   <div class="container" role="main">
     <article class="article" class="blog-post">
+
+      {{ if .Params.headerimg }}
+        <img src="{{ $.Params.headerimg }}">
+      {{ end }}
+
       {{ partial "toc.html" . }}
 
       {{ if .Params.tags }}
