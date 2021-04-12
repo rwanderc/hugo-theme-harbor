@@ -10,6 +10,7 @@
 
       {{ if .Params.tags }}
         <div class="blog-tags">
+          Tags:
           {{ range .Params.tags }}
             <a
               href="{{ "" | absLangURL }}tags/{{ . | urlize }}{{ if $.Site.Params.uglyurls }}.html{{ else }}/{{ end }}"
