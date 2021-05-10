@@ -2,8 +2,11 @@
   <div class="container" role="main">
     <article class="article" class="blog-post">
 
-      {{ if .Params.headerimg }}
-        <img src="{{ $.Params.headerimg }}">
+      {{ if .Params.header_img }}
+        <img src="{{ $.Params.header_img }}" title="{{ $.Params.img_credits }}" >
+        {{ if .Params.img_credits }}
+          <center><small><sup>Image by <a href="{{ $.Params.img_credits_url }}">{{ $.Params.img_credits }}</a></sup></small></center>
+        {{ end }}
       {{ end }}
 
       {{ partial "toc.html" . }}
