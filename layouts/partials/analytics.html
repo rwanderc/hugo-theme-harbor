@@ -1,4 +1,8 @@
-{{ if or ( .Site.Params.enableGoogleAnalytics ) ( not .Site.IsServer ) }}
+enableGoogleAnalytics: {{ .Site.Params.enableGoogleAnalytics }}<br>
+IsServer: {{ .Site.IsServer }}<br>
+result: {{ and ( .Site.Params.enableGoogleAnalytics ) ( not .Site.IsServer ) }}
+
+{{ if and ( .Site.Params.enableGoogleAnalytics ) ( not .Site.IsServer ) }}
   {{ with .Site.GoogleAnalytics }}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
