@@ -1,7 +1,3 @@
-enableGoogleAnalytics: {{ .Site.Params.enableGoogleAnalytics }}<br>
-IsServer: {{ .Site.IsServer }}<br>
-result: {{ and ( .Site.Params.enableGoogleAnalytics ) ( not .Site.IsServer ) }}
-
 {{ if and ( .Site.Params.enableGoogleAnalytics ) ( not .Site.IsServer ) }}
   {{ with .Site.GoogleAnalytics }}
     <!-- Global site tag (gtag.js) - Google Analytics -->
