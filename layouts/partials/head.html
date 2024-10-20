@@ -7,7 +7,7 @@
                  {{- .Site.Params.Description -}}
                {{ end }}"
 >
-{{- with .Site.Author.Name }}
+{{- with .Site.Params.Author.Name }}
   <meta name="author" content="{{ . }}" />
 {{- end }}
 {{- partial "opengraph.html" . }}
